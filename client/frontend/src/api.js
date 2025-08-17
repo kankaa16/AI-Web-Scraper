@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = "https://ai-web-scraper-1-sz2s.onrender.com";
+const API_BASE = "https://ai-web-scraperr-vbtd.onrender.com";
 
 export const fetchWebsites = () => axios.get(`${API_BASE}/`);
 export const scrapeWebsite = (url) => axios.post(`${API_BASE}/scrape`, { url });
