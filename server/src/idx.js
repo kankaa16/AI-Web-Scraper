@@ -6,7 +6,7 @@ import websiteroutes from './routes/scrape.js';
 dotenv.config();
 
 const app = express();
-app.use(cors({ origin: 'https://ai-web-scraper-seven.vercel.app/' }));
+app.use(cors({ origin: 'https://ai-web-scraper-khf7.vercel.app' }));
 app.use(express.json());
 
 // Test server
