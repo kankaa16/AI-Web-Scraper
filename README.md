@@ -2,7 +2,7 @@
 
 A **full-stack web app** to scrape websites, extract metadata, and optionally enhance descriptions using AI.
 
-# Live link 🔗 : https://ai-web-scraper-seven.vercel.app/
+# Live link 🔗 : https://ai-web-scraper-khf7.vercel.app/
 
 ## ✨ Features
 
