@@ -7,7 +7,6 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  /* align-items removed to allow scrolling */
   flex-direction: column;
 }
 
@@ -119,7 +118,6 @@ td a:hover {
   transition: 0.2s;
 }
 
-/* Edit button - green */
 .action-buttons button.edit-btn {
   background-color: #4caf50;
 }
@@ -128,7 +126,6 @@ td a:hover {
   background-color: #45a049;
 }
 
-/* Delete button - red */
 .action-buttons button.delete-btn {
   background-color: #f44336;
 }
@@ -144,8 +141,8 @@ td a:hover {
   }
 
   .form input {
-    font-size: 14px; /* smaller font for mobile */
-    padding: 8px;    /* smaller padding */
+    font-size: 14px; 
+    padding: 8px;    
   }
 
   th,

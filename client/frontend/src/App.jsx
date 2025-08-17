@@ -52,7 +52,7 @@ export default function App() {
   const newBrand = prompt("Enter new brand name:");
   const newDescription = prompt("Enter new description:");
   
-  if (!newBrand && !newDescription) return; // nothing to update
+  if (!newBrand && !newDescription) return; 
 
   try {
     const { data } = await updateWebsite(id, {

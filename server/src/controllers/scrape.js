@@ -28,11 +28,10 @@ export async function enhanceDescription(description) {
     return response.choices[0].message.content;
   } catch (err) {
     console.error("OpenAI error:", err);
-    return description; // fallback to original description
+    return description; // added fallbacks to original description, as it didnt handled edge cases!!
   }
 }
-
-// Scrape website
+//scraping site!
 export const scrapeWebsite = async (req, res) => {
   const { url } = req.body;
   if (!url || !isValidUrl(url)) return res.status(400).json({ error: 'Valid URL is required' });
@@ -66,8 +65,7 @@ export const scrapeWebsite = async (req, res) => {
     res.status(500).json({ error: err.message || 'Scraping failed' });
   }
 };
-
-// Retrieve all records
+//fetching all records:!
 export const getWebsites = async (req, res) => {
   try {
     const { data, error } = await supabase
@@ -82,8 +80,7 @@ export const getWebsites = async (req, res) => {
     res.status(500).json({ error: err.message || 'Failed to fetch websites' });
   }
 };
-
-// Update a record
+//updating desc or name of site!
 export const updateWebsite = async (req, res) => {
   const { id } = req.params;
   const { brand, description } = req.body;
@@ -101,7 +98,6 @@ export const updateWebsite = async (req, res) => {
   }
 };
 
-// Delete a record
 export const deleteWebsite = async (req, res) => {
   const { id } = req.params;
   try {
