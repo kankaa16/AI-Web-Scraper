@@ -3,9 +3,8 @@ import {
   scrapeWebsite,
 } from '../controllers/scrape.js';
 
-const router = express.Router();
+const router=express.Router();
 
-router.post('/scrape', scrapeWebsite);
-
+router.post('/scrape',scrapeWebsite);
 
 export default router;

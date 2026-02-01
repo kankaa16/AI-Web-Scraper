@@ -9,11 +9,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Test server
+//test server!!
 app.get('/', (req, res) => res.send('Server running 🚀'));
 
-// API routes
-app.use('/api', websiteroutes);
+//api routes
+app.use('/api',websiteroutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT=process.env.PORT||5000;
+app.listen(PORT,()=>console.log(`Server running on port ${PORT}`));

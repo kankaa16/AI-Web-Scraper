@@ -1,22 +1,22 @@
-import { useState } from "react";
-import { scrapeWebsite } from "./api.js";
+import {useState} from "react";
+import {scrapeWebsite} from "./api.js";
 import "./App.css";
 
 export default function App() {
-  const [url, setUrl] = useState("");
-  const [websites, setWebsites] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [url, setUrl]=useState("");
+  const [websites, setWebsites]=useState([]);
+  const [loading, setLoading]=useState(false);
+  const [error, setError]=useState("");
 
-  const handleScrape = async (e) => {
+  const handleScrape=async(e)=>{
     e.preventDefault();
-    if (!url) return;
+    if(!url) return;
 
     setLoading(true);
     setError("");
 
     try {
-      const { data } = await scrapeWebsite(url);
+      const {data}=await scrapeWebsite(url);
 
       // data = { url, brand, description, scrapedAt }
       setWebsites((prev) => [data, ...prev]);
