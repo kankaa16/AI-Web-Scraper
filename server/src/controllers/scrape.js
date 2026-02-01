@@ -11,7 +11,7 @@ const isValidUrl=(url)=>{
   }
 };
 
-let openai = null;
+let openai=null;
 
 if(process.env.OPEN_API_KEY) {
   openai=new OpenAI({
